@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>xxi js</title>
+</head>
+<body>
+<p >dian ji an niu xhuang wuci</p>
+<button onclick="myfun()">click there</button>
+<p id="demo"></p>
+<script type="text/javascript">
+	function myfun(){
+		var x=''; x
+		for (var i = 0; i < 5; i++) {
+			x=x+"该数字为："+i+'<br>';
+		}
+	document.getElementById('demo').innerHTML=x;
+}
+</script>
+</body>
+</html>
+
+
+<!---JavaScript正则表达式--->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js正则表达式</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+<!--在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()。
+
+search() 方法 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。
+
+replace() 方法 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串-->
+<p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var str = "Visit Runoob!"; 
+    var n = str.search(/Runoob/i);
+    document.getElementById("demo").innerHTML = n;
+}
+</script>
+</body>
+</html>
+
+
+
+<!---
+1.修饰符 可以在全局搜索中不区分大小写:
+修饰符	       描述
+i	          执行对大小写不敏感的匹配。
+g	          执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+m	          执行多行匹配。
+
+2.正则表达式模式  方括号用于查找某个范围内的字符：
+表达式	描述
+[abc]	查找方括号之间的任何字符。
+[0-9]	查找任何从 0 至 9 的数字。
+(x|y)	查找任何以 | 分隔的选项。
+
+
+3.元字符是拥有特殊含义的字符：
+
+元字符	描述
+\d	    查找数字。
+\s	    查找空白字符。
+\b	    匹配单词边界。
+\uxxxx	查找以十六进制数 xxxx 规定的 Unicode 字符。
+
+4.量词:
+量词	描述
+n+	匹配任何包含至少一个 n 的字符串。
+n*	匹配任何包含零个或多个 n 的字符串。
+n?	匹配任何包含零个或一个 n 的字符串
+
+5.使用 test()
+test() 方法是一个正则表达式方法。
+
+test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。
+
+以下实例用于搜索字符串中的字符 "e"：
+<script>
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+</script>
+--->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>替换 "Microsoft" 为 "Runoob" :</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo">请访问 Microsoft!</p>
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace("Microsoft","Runoob");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
